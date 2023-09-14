@@ -71,14 +71,12 @@ class _LoginPageState extends State<LoginPage> {
 
     //RUN THE CREATE ACCOUNT METHOD
     String _loginAccountFeedback = await _loginAccount();
-    if(_loginAccountFeedback != null){
-      _alertDialogBuilder(_loginAccountFeedback);
+    _alertDialogBuilder(_loginAccountFeedback);
 
-      //SET THE FORM TO REGULAR STATE
-      setState(() {
-        _loginFromLoading = false;
-      });
-    }
+    //SET THE FORM TO REGULAR STATE
+    setState(() {
+      _loginFromLoading = false;
+    });
   }
 
   //FOCUS NODE FOR INPUT FIELDS
